@@ -1,0 +1,53 @@
+@charset "utf-8";
+/*=========================Reset_start==========================*/
+body,h1,h2,h3,h4,h5,h6,div,p,dl,dt,dd,ol,ul,li,form,table,th,td,a,img,span,strong,var,em,input,textarea,select,option{margin: 0; padding: 0;}
+/*@font-face { 
+	font-family: Lovelo-Black;
+	src: url('../font/SourceHanSansCN-ExtraLight.otf');
+} 
+body{
+	font-family: Lovelo-Black, "SourceHanSansCN-ExtraLight";
+}*/
+html,body{font-size: 12px; text-align: left;font-family: "PingFang SC";height:680px;
+   overflow: hidden}
+ul,ol{list-style: none;}
+img{border: 0;}
+input,select,textarea{outline:0;}
+textarea{resize:none;}
+table{border-collapse: collapse; border-spacing: 0;}
+th,strong,var,em{font-weight: normal; font-style: normal;}
+a{text-decoration: none;}
+/*a:link,a:visited,a:hover,a:active{text-decoration:none;} */
+/*==========================Reset_End===========================*/
+
+
+@media screen and (min-width:480px) and (max-width:639px) {
+	html,body {
+		font-size: 15px;
+	}
+}
+
+@media screen and (min-width:640px) and (max-width:719px) {
+	html,body  {
+		font-size: 20px
+
+	}
+}
+
+@media screen and (min-width:720px) and (max-width:749px) {
+	html ,body {
+		font-size: 22.5px
+	}
+}
+
+@media screen and (min-width:750px) and (max-width:799px) {
+	html,body  {
+		font-size: 23.5px
+	}
+}
+
+@media screen and (min-width:800px) and (max-width:959px) {
+	html ,body {
+		font-size: 25px
+	}
+}
