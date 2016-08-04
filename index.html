@@ -2,18 +2,31 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>红旗学院</title>
+	<title>红旗学院.com-专注网络空间安全人才培养</title>
+	<link rel="shortcut icon" href="images/flag_logo.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 	<link rel="stylesheet" href="stylesheets/reset.css">
 	<link rel="stylesheet" href="stylesheets/swiper.min.css">
 	<link rel="stylesheet" href="stylesheets/style.css">
+	<script>
+		function SF(obj) {
+			var oh = obj.clientHeight;
+			var scroll = document.getElementById('scroll');
+			var scrollNum = 0;
+			setInterval(function () {
+				scrollNum += 1;
+				scrollNum >= oh? scrollNum = 0: scrollNum;
+				scroll.scrollTop = scrollNum;
+			}, 40);
+		}
+	</script>
 </head>
 <body>
 	<div class="bg"></div>
 	<div class="back-box">
 		<nav id="nav" class="nav">
-			<h2>M I L L E N N I U M</h2>
-			<h2>F A L C O N</h2>
+			<h2>T H E R E D F L A G</h2>
+			<h2>C O L L E G E</h2>
 			<ul>
 				<li class="nav-item current">
 					<a href="javascript:;">
@@ -23,20 +36,20 @@
 				</li>
 				<li class="nav-item">
 					<a href="javascript:;">
-						首页介绍
-						<span>Home</span>
+						内院弟子
+						<span>Inner Court Disciples</span>
 					</a>
 				</li>
 				<li class="nav-item">
 					<a href="javascript:;">
-						首页介绍
-						<span>Home</span>
+						外院弟子
+						<span>Outer Court Disciples</span>
 					</a>
 				</li>
 				<li class="nav-item">
 					<a href="javascript:;">
-						首页介绍
-						<span>Home</span>
+						红旗战队
+						<span>RedFlag Teams</span>
 					</a>
 				</li>
 				<li class="nav-item">
@@ -48,32 +61,75 @@
 				<div class="select"></div>
 			</ul>
 			<div class="copyright">
-				<p>北京学邦世纪科技有限公司</p>
+				<p style="color:#C00000;">中国（中关村）网络安全与信息化产业联盟</p>
+				<p>项目实施：北京学邦世纪科技有限公司</p>
 				<p>北京石景山区石景山路40号</p>
 				<p>信安大厦六层A-C</p>
-				<p>http://www.xbsj.org</p>
+				<p>WWW . 红旗学院 . COM</p>
 			</div>
 			<div class="signature">
-				<p>学邦世纪</p>
-				<p>Millennium Falcons Inc. 2016©</p>
+				<p>红旗学院</p>
+				<p>010-80444266</p>
+				<p>京ICP备16****47号</p>
 			</div>
 		</nav>
-		<script>document.getElementById('nav').style.height=document.documentElement.clientHeight-90+'px';</script>
 		<main class="swiper-container main">
 	        <div class="swiper-wrapper">
 	            <div class="swiper-slide swiper-no-swiping bg_01">
-	            	<img src="images/bg_01.png" alt="">
+	            	<img src="images/bg_01.png" alt="红旗学院" title="红旗学院">
+	            	<h2><span>网络空间</span> ———— 国家的第五疆城</h2>
 	            </div>
-	            <div class="swiper-slide swiper-no-swiping">Slide 2</div>
-	            <div class="swiper-slide swiper-no-swiping">Slide 3</div>
-	            <div class="swiper-slide swiper-no-swiping">Slide 4</div>
-	            <div class="swiper-slide swiper-no-swiping" id="allmap">Slide 5</div>
+	            <div class="swiper-slide swiper-no-swiping bg_02">
+	            	<img class="title" src="images/flag4_biaoti.png" alt="内院弟子" title="内院弟子">
+	            	<ul>
+	            		<li>
+		            		<img src="images/zd_01.png" alt="">
+		            		<h4><span>红旗学院 </span>实景学习氛围</h4>
+		            		<img src="images/zd_02.png" alt="">
+	            		</li>
+	            		<li>
+			            	<img src="images/zd_03.png" alt="">
+		            		<h4><span>红旗学院 </span>行业、企业分享</h4>
+		            		<img src="images/zd_04.png" alt="">
+	            		</li>
+	            		<li>
+			            	<img src="images/zd_05.png" alt="">
+		            		<h4><span>红旗学院 </span>学长分享</h4>
+		            		<img src="images/zd_06.png" alt="">
+	            		</li>
+	            	</ul>
+	            </div>
+	            <div class="swiper-slide swiper-no-swiping bg_03">
+					<img class="title" src="images/flag6_biaoti.png" alt="外院弟子" title="外院弟子">
+					<div class="content">
+						<h3>红旗学院 首创网络安全人才私人职业服务体系：</h3>
+						<h5>响应习总书记关于网络安全人才特殊待遇的指示，以红旗学院为中心，创建专业的人才输送平台，打造“私人定制”级的就业服务体系，实现用人单位和学员的广泛接触和无缝对接，帮助红旗学院的学员实现
+						<span>&nbsp; 三 年 收 入 破 30 万 ！</span></h6>
+					</div>
+					<img src="images/gundong2.png" class="scroll_top">
+					<div id="scroll" class="scroll">
+						<img src="images/gundong.png" id="scroll_in" class="scroll_in" onload="SF(this)">
+					</div>
+	            </div>
+	            <div class="swiper-slide swiper-no-swiping bg_04">
+					<img class="title" src="images/flag3_biaoti.png" alt="红旗站队" title="红旗站队">
+					<div class="content">
+						<h3>红旗学院 独家：外院弟子—内院弟子—红旗战队 技术成长路线：</h3>
+						<h5>吸纳所有对信息安全抱有极大兴趣和学习热情的青年，成为红旗学院“外院弟子”在红旗学院内学习4个月，然后进入联盟各个企业的信息安全岗位进行实战历练；根据“外院弟子”各自的成长，不定期选拔、甄选成为红旗学院的“内院弟子”给予其莫大的机缘，传承“红旗学院”先锋技术；从“内院弟子”中挑选顶尖学员组成专业“红旗战队”有选择的参加国内外各种竞赛，使其在信息安全领域扬名立万！</h6>
+					</div>
+	            </div>
+	            <div class="swiper-slide swiper-no-swiping" id="allmap"></div>
 	        </div>
 	        <!-- Add Pagination -->
 	        <!-- <div class="swiper-pagination"></div> -->
 	    </main>
 	</div>
 </body>
+<script>
+	var ddc = document.documentElement.clientHeight;
+	document.getElementById('nav').style.height = ddc-90+'px';
+	document.getElementById('scroll').style.height = ddc-310+'px';
+</script>
 <script src="javascripts/jquery-2.1.4.min.js"></script>
 <script src="javascripts/swiper.min.js"></script>
 <script src="javascripts/main.js"></script>

@@ -9,6 +9,7 @@ body {
     color: #fff;
     margin: 0;
     padding: 0;
+    font-family: "微软雅黑";
 }
 .swiper-container {
     width: 100%;
@@ -132,8 +133,92 @@ body {
 	position: absolute;
 }
 .main .bg_01 img {
-	width: 60%;
+	width: 85%;
 	display: block;
 	position: absolute;
-	top: 20px;
+	top: 30px;
+}
+.main .bg_01 h2 {
+	font-size: 40px;
+	margin-top: 230px;
+	font-weight: 100;
+	word-spacing: 2px;
+}
+.main .bg_01 h2 span {
+	font-size: 60px;
+}
+.main .bg_02 img.title, .main .bg_03 img.title, .main .bg_04 img.title {
+	height: 60px;
+	display: block;
+	position: absolute;
+	top: 60px;
+	left: 40px;
+}
+.main .bg_02 ul {
+	width: 94%;
+	position: absolute;
+	top: 160px;
+	left: 40px;
+}
+.main .bg_02 ul li {
+	width: 33%;
+	float: left;
+	position: relative;
+	text-align: center;
+	overflow: hidden;
+}
+.main .bg_02 ul li h4 {
+	display: inline-block;
+	width: 100%;
+	float: left;
+	margin: 10px 0;
+}
+.main .bg_02 ul li h4 span {
+	color: #C00000;
+}
+.main .bg_02 ul li img {
+	display: inline-block;
+	width: 90%;
+	float: left;
+}
+.main .bg_03 .content, .main .bg_04 .content {
+	width: 94%;
+	position: absolute;
+	top: 140px;
+	left: 40px;
+	text-align: left;
+}
+.main .bg_03 .content h3, .main .bg_04 .content h3 {
+	color: #C00000;
+	font-weight: 600;
+	line-height: 50px;
+}
+.main .bg_03 .content h5, .main .bg_04 .content h5 {
+	font-weight: 200;
+	line-height: 30px;
+}
+.main .bg_03 .content h5 span {
+	color: #C00000;
+	font-weight: 600;
+	font-size: 20px;
+}
+.main .bg_03 .scroll {
+	position: absolute;
+	width: 94%;
+	top: 280px;
+	left: 40px;
+	background-color: #fff;
+	overflow: hidden;
+	border-bottom: 1px solid #fff;
+}
+.main .bg_03 .scroll_top {
+	width: 94%;
+	position: absolute;
+	top: 280px;
+	left: 40px;
+	z-index: 1;
+}
+.main .bg_03 .scroll_in {
+	width: 100%;
+	float: left;
 }
