@@ -171,6 +171,7 @@
 .description--preview p {
 	font-size: 0.65em;
 	max-width: 100%;
+	color: #ccc;
 }
 
 .description--preview p em {
