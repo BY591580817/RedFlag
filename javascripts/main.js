@@ -1,5 +1,11 @@
 
 $(document).ready(function () {
+
+	var DH = $(document).height();
+	// alert(DH)
+	$('#nav').height(DH);
+	$('.inner').css({height:DH-100+'px',marginTop:0,top:50+'px'});
+
 	//some var
 	var isSwiper = true;
 	var saveSwiper = 0;
@@ -13,7 +19,7 @@ $(document).ready(function () {
 	    onSlideChangeEnd: function(swiper){
 	    	isSwiper = true;
 	      	saveSwiper = swiper.activeIndex;
-	      	navSelect.animate({"top": saveSwiper * 32 + 'px'}, 0);
+	      	navSelect.animate({"top": saveSwiper * 2 + 'vw'}, 0);
 	      	navItem.eq(saveSwiper).addClass('current').siblings().removeClass('current');
 	    }
 	});
@@ -42,7 +48,7 @@ $(document).ready(function () {
 			navItem.removeClass('current');
 			var i = $(this).index();
 			var _this = $(this);
-			navSelect.animate({"top": i * 32 + 'px'}, 600, function () {
+			navSelect.animate({"top": i * 2 + 'vw'}, 600, function () {
 				_this.addClass('current').siblings().removeClass('current');
 			});
 			swiper.slideTo(i, 1800, true);
