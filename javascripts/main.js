@@ -220,6 +220,30 @@ $(document).ready(function () {
 	//     var mainheight = $(this).contents().height()+30;
 	//     $(this).height(mainheight);
 	// });
+
+	$.floatingAd({
+		delay: 60,
+		isLinkClosed: true,
+		ad:	[{
+			'headFilter': 0.3,
+			'img': 'images/918open.png',
+			'imgHeight': 220,
+			//'imgWidth': 176,
+			'linkUrl': './htmls/enrollment.html',
+			'z-index': 10000,
+			'title': '红旗学院',
+			'closed-icon': 'images/cha3.png'
+		}],
+		onClose: function(elem){
+			// alert('关闭');
+		}
+	});
+	
+	$("#aa").floatingAd({
+		onClose:function(elem){}
+	});
+
+
 });
 
 function isWhell(e) {
