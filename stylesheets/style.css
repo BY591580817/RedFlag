@@ -131,13 +131,23 @@ body {
 	border-radius: 2px;
 }
 .nav .copyright {
+	width: 100%;
 	margin: 3vw 0 2vw;
 }
 .nav .copyright p, .nav .signature p{
+	width: 100%;
 	color: #9c9c9c;
 	font-size: 0.8vw;
 	line-height: 1.2vw;
 	padding: 0 20px;
+}
+.nav .copyright p a {
+	width: 80%;
+	color: #ccc;
+	display: block;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
 }
 /***********************  main*/
 .main {
@@ -341,6 +351,86 @@ body {
 	padding-left: 14px;
 }
 
+.bg_07 .bg_07_in {
+	width: 60%;
+	height: 440px;
+	overflow: hidden;
+	text-align: left;
+	margin-left: 10%;
+	margin-top: 100px;
+}
+.bg_07 ul {
+	width: 100%;
+	/*height: 400px;*/
+	overflow: hidden;
+}
+.bg_07 li {
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	font-size: 20px;
+	text-align: left;
+	display:block;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+.bg_07 li a {
+	color: #ccc;
+	text-decoration: none;
+	width: 80%;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	display: inline-block;
+	height: 40px;
+	line-height: 40px;
+	float: left;
+}
+.bg_07 li span {
+	width: 20%;
+	display: inline-block;
+	text-align: right;
+	color: #ccc;
+	font-size: 18px;
+	font-weight: 100;
+	height: 40px;
+	line-height: 40px;
+	float: left;
+}
+.bg_07 .choose {
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	cursor: pointer;
+}
+.bg_07 .choose .l {
+	float: left;
+	width: 20%;
+	text-align: left;
+}
+.bg_07 .choose .r {
+	float: right;
+	width: 20%;
+	text-align: right;
+}
+.bg_07 .choose .c {
+	height: 40px;
+	overflow: hidden;
+	width: 60%;
+	float: left;
+}
+.bg_07 .choose .c li {
+	float: left;
+	width: 10%;
+	text-decoration: none;
+}
+.bg_07 .choose .c li.active {
+	text-decoration: underline;
+}
+.bg_07 li span {
+	margin: 0;
+}
 
 /* floatingAd */
 .floatingAd .ad{z-index:100;background:none;position:absolute;display:none;}

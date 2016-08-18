@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>红旗学院</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keyword" content="红旗学院.com-专注网络空间安全人才培养, 红旗学院, 网络空间">
+	<link rel="shortcut icon" href="../images/flag_logo.png">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://cdn1.lncld.net/static/js/av-min-1.2.1.js"></script>
+	<script type="text/javascript" src="../javascripts/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" ckharset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&uuid=&pophcol=2&lang=zh"></script>
+	<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>  
+</head>
+<body>
+	<div class="bg"></div>
+	<div id="boder"></div>
+	<footer class="footer">
+		<img width="40%" style="margin-bottom:20px;" src="../images/bg_01.png" alt="红旗学院.com">
+		<p>中国网络安全与信息化产业联盟</p>
+		<p>项目实施：北京学邦世纪科技有限公司</p>
+		<p>北京市石景山路40号信安大厦六层A-C区</p>
+		<p>010-80444266, 56101140</p>
+		<p>www.红旗学院.com</p>
+	</footer>
+</body>
+<script type="text/javascript">
+	var APP_ID = 'GYEONyDaadWBdEEpg1zdN2x6-gzGzoHsz', APP_KEY = 'c6c4gHPn6j3UnHm3vPup2HIa';
+	AV.init({appId: APP_ID, appKey: APP_KEY});
+
+	var url = document.location.toString();
+	var id = url.split('id=')[1];
+
+	$('#boder').append('<div class="bshare-custom" title="红旗学院" url="http://hqxy.xbsj.org/htmls/list.html?id='+id+'" summary=""></div>');
+
+	var query_lists = new AV.Query('Lists');
+	query_lists.get(id).then(function (data) {
+		var divs = '<div class=\'top\'>'+data.get('title')+'</div>';
+		var spans = '<span class=\'date\'>'+changeDate(data.updatedAt)+'</span>'
+		$('title').eq(0).html('红旗学院－' + data.get('title'));
+		$('#boder').append(divs);
+		$('#boder').append(spans);
+		doContent(data.get('content').id);
+	}, function (error) {
+		console.log(error);
+	});
+
+	function doContent(id) {
+		var query_content = new AV.Query('Content');
+		query_content.get(id).then(function (data) {
+			var info = data.get('info');
+			var imgs = data.get('images');
+			var res = {info: info, imgs: imgs};
+			doRes(res);
+		}, function (error) {
+			console.log(error);
+		});
+	}
+
+	function doRes(res) {
+		var imgs = res.imgs;
+		var info = res.info.split('<img>');
+		for (var i = 0; i < info.length; i ++) {
+			if (imgs[i]) {
+				var imgsz = '<div class=\'info\'>'+info[i]+'</div><img class=\'logo\' src=\''+imgs[i].url+'\' alt=\''+imgs[i].title+'\'><h4 class=\'title\'>'+imgs[i].title+'</h4>';
+			}else {
+				var imgsz = '<div class=\'info\'>'+info[i]+'</div>';
+			}
+			$('#boder').append(imgsz);
+		}
+	}
+
+	function changeDate(date) {
+		if (date.getMonth()+1 < 10) {
+			return 2016+'-0'+(date.getMonth()+1)+'-'+date.getDate();
+		}
+		if (date.getDate() < 10) {
+			return 2016+'-'+(date.getMonth()+1)+'-0'+date.getDate();
+		}
+		return 2016+'-'+(date.getMonth()+1)+'-'+date.getDate();
+	}
+	
+	$(document).ready(function() {  
+	    iBShare.init();    //初始化  
+	});  
+	  
+	// bShare分享  
+	var iBShare = {  
+	    //初始化  
+	    init: function() {  
+	        var $shareBox = $(".bshare-custom");  
+	        //加载分享工具  
+	        var tools = '<a title="分享到QQ空间" class="bshare-qzone"></a>';  
+	        tools += '<a title="分享到新浪微博" class="bshare-sinaminiblog"></a>';  
+	        tools += '<a title="分享到人人网" class="bshare-renren"></a>';  
+	        tools += '<a title="分享到腾讯微博" class="bshare-qqmb"></a>';  
+	        tools += '<a title="分享到网易微博" class="bshare-neteasemb"></a>';  
+	        tools += '<a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a>';  
+	        $shareBox.append(tools);  
+	        //绑定分享事件  
+	        $shareBox.children("a").click(function() {  
+	            var parents = $(this).parent();  
+	            bShare.addEntry({  
+	                title: parents.attr("title"),  
+	                url: parents.attr("url"),  
+	                summary: parents.attr("summary"),  
+	                pic: parents.attr("pic")  
+	            });  
+	        });  
+	    }  
+	}  
+</script>
+</html>
