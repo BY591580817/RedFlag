@@ -25,7 +25,7 @@ $(document).ready(function () {
 	});
 
 	//controller swiper page
-	swiper.slideTo(4, 0, true);
+	// swiper.slideTo(4, 0, true);
 
 	//mousewheel
 	// $(document).on('mousewheel DOMMouseScroll', function (e) {
